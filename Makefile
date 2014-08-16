@@ -1,7 +1,12 @@
 CC=gcc
-CFLAGS= -lpthread -lm -w
+CFLAGS=-std=c99 -w -lm -lpthread
 
-EXE= peer tracker tgen
+EXE=tgen peer tracker
 
 all: ${EXE}
 
+${EXE}:
+	$(CC) $@.c -o $@ $(CFLAGS)
+
+clean:
+	rm -rf *o ${EXE}

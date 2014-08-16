@@ -11,6 +11,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <signal.h>
+#include <sys/time.h>
 
 #include <pthread.h>
 void error(const char *msg)
